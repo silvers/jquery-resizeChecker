@@ -15,7 +15,12 @@ In your web page:
 <script src="dist/resizeChecker.min.js"></script>
 <script>
 jQuery(function($) {
-  $.awesome(); // "awesome"
+  $('#wrapper').resizeChecker({
+    callback: function(e, target, data) {
+      console.log('resize height: ' + data.previous.height + ' => ' + data.current.height);
+      console.log('resize width:  ' + data.previous.width + ' => ' + data.current.width);
+    }
+  });
 });
 </script>
 ```
