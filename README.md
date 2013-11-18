@@ -1,7 +1,5 @@
 # Resizechecker
 
-The best jQuery plugin ever.
-
 ## Getting Started
 Download the [production version][min] or the [development version][max].
 
