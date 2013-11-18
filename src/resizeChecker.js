@@ -9,7 +9,6 @@
 (function($) {
 
   $.fn.resizeChecker = function(options) {
-    console.log('start watching resize.');
     options = $.extend({}, $.resizeChecker.options, options);
 
     var $target = $(this);
@@ -34,11 +33,8 @@
       return isResize;
     };
 
-    var interval = setInterval(function() {
-      console.log('checking resize...');
-
+    setInterval(function() {
       if ( checkResize() ) {
-        console.log('trigger costomresize.');
         $target.trigger(options.eventname, [this, data]);
       }
     }, options.interval);
